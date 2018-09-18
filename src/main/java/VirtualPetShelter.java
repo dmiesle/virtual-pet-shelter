@@ -22,7 +22,7 @@ public class VirtualPetShelter {
 	}
 
 	public void remove(Pet petTag) {
-		pets.remove(petTag.getPetTag(), petTag);
+		pets.remove(petTag.getPetTag());
 
 	}
 
@@ -36,6 +36,18 @@ public class VirtualPetShelter {
 	public void trainAll() {
 		for (Entry<String, Pet> entry : pets.entrySet()) {
 			entry.getValue().attend();
+		}
+
+	}
+
+	public void trainOne(String petTag) {
+		pets.get(petTag).attend();
+
+	}
+
+	public void waterAll() {
+		for (Entry<String, Pet> entry : pets.entrySet()) {
+			entry.getValue().water();
 		}
 
 	}

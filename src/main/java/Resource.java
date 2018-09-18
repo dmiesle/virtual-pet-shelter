@@ -1,5 +1,3 @@
-import java.util.function.Consumer;
-
 public class Resource {
 
 	private int food;

@@ -11,7 +11,7 @@ public class VirtualPetApp {
 		System.out.println("Your new pet needs a name. Please give it one now:");
 		String name = input.nextLine();
 		String personality = myStatus.getPersonality();
-		Pet myPet = new Pet("1234", name, 5, 2, 3, 0, 1, 1, personality, "needs description");
+		Pet myPet = new Pet("1234", name, 5, 2, 2, 3, 0, 1, 1, personality, "needs description");
 		Resource myResource = new Resource(0, 0, 0, 0, 0, "");
 		System.out.println(name + " is so excited you are going to care for it. Your pet is " + myPet.getPetType());
 		System.out.println(name + " a" + myPet.getPetDescription()+ " "+ name + " is " + myStatus.getHungerStatus(myPet.getFoodLevel()) + " , is feeling "

@@ -10,6 +10,7 @@ public class Pet {
 	private String petType;
 	private String description;
 	private String petTag;
+	private int watered;
 
 	
 	public String getPetTag() {
@@ -92,13 +93,23 @@ public class Pet {
 	public String getPetType() {
 		return petType;
 	}
+	
+
+	public int getWater() {
+		return watered;
+	}
+	
+
+	public void water() {
+		watered = watered + 1;
+	}
 
 	public void setExperience() {
 		experience = 0;
 	}
 
 	// this is my constructor
-	public Pet(String petTag, String petName, int foodLevel, int entertained, int rested, int experience, int level, int alive,
+	public Pet(String petTag, String petName, int foodLevel, int entertained, int watered, int rested, int experience, int level, int alive,
 			String petType, String petDescription) {
 		this.petName = petName;
 		this.foodLevel = foodLevel;
@@ -110,6 +121,7 @@ public class Pet {
 		this.petType = petType;
 		this.description = petDescription;
 		this.petTag = petTag;
+		this.watered = watered;
 	}
 
 	public String tick() {

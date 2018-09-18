@@ -18,8 +18,8 @@ public class VirtualPetShelterTest {
 	@Before
 	public void setUp() {
 		underTest = new VirtualPetShelter();
-		pet1 = new Pet("1234", "Bob", 5, 2, 3, 0, 1, 1, "Basic", "nothing special");
-		pet2 = new Pet("1235", "Sally", 5, 2, 3, 0, 1, 1, "Basic", "needs description");
+		pet1 = new Pet("1234", "Bob", 5, 2, 3, 3, 0, 1, 1, "Basic", "nothing special");
+		pet2 = new Pet("1235", "Sally", 5, 2, 3, 3, 0, 1, 1, "Basic", "needs description");
 	}
 
 	@Test
@@ -65,6 +65,26 @@ public class VirtualPetShelterTest {
 		assertThat(retrievedPet, is(3));
 		assertThat(retrievedPet2, is(3));
 
+	}
+	
+	@Test
+	public void giveWaterToAllPetsInTheShelter() {
+		underTest.add(pet1);
+		underTest.add(pet2);
+		underTest.waterAll();
+		int retrievedPet = pet1.getWater();
+		int retrievedPet2 = pet2.getWater();
+		assertThat(retrievedPet, is(4));
+		assertThat(retrievedPet2, is(4));
+
+	}
+	
+	@Test
+	public void playWithOnePetInTheShelter() {
+		underTest.add(pet1);
+		underTest.trainOne(pet1.getPetTag());
+		int retrievedPet = pet1.getEntertained();
+		assertThat(retrievedPet, is(3));
 	}
 
 }
