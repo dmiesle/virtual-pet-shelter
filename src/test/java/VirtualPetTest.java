@@ -7,7 +7,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 public class VirtualPetTest {
-	Pet underTest = new Pet("My Pet", 1, 1, 1, 10, 1, 1, "Curious");
+	Pet underTest = new Pet("123","My Pet", 1, 1, 1, 10, 1, 1, "Curious", "description");
 	Resource underTest1 = new Resource(5, 0, 0, 0, 0, "feed");
 
 	@Test

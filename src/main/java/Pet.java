@@ -8,11 +8,22 @@ public class Pet {
 	private int level;
 	private int alive;
 	private String petType;
+	private String description;
+	private String petTag;
 
+	
+	public String getPetTag() {
+		return petTag;
+	}
+	
 	// this is the getter
 	public String getPetName() {
 		return petName;
 	}
+	public String getPetDescription() {
+		return description;
+	}
+
 
 	// food changes
 	public int getFoodLevel() {
@@ -87,8 +98,8 @@ public class Pet {
 	}
 
 	// this is my constructor
-	public Pet(String petName, int foodLevel, int entertained, int rested, int experience, int level, int alive,
-			String petType) {
+	public Pet(String petTag, String petName, int foodLevel, int entertained, int rested, int experience, int level, int alive,
+			String petType, String petDescription) {
 		this.petName = petName;
 		this.foodLevel = foodLevel;
 		this.entertained = entertained;
@@ -97,6 +108,8 @@ public class Pet {
 		this.level = level;
 		this.alive = alive;
 		this.petType = petType;
+		this.description = petDescription;
+		this.petTag = petTag;
 	}
 
 	public String tick() {
