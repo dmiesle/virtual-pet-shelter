@@ -39,6 +39,12 @@ public class VirtualPetShelter {
 		}
 
 	}
+	public void restAll() {
+		for (Entry<String, Pet> entry : pets.entrySet()) {
+			entry.getValue().sleep();
+		}
+
+	}
 
 	public void trainOne(String petTag) {
 		pets.get(petTag).attend();
@@ -49,7 +55,13 @@ public class VirtualPetShelter {
 		for (Entry<String, Pet> entry : pets.entrySet()) {
 			entry.getValue().water();
 		}
+	}
+		public void tickAll() {
+			for (Entry<String, Pet> entry : pets.entrySet()) {
+				entry.getValue().tick();
+			}
 
 	}
+
 
 }

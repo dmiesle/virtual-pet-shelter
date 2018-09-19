@@ -3,29 +3,29 @@ import java.util.List;
 import java.util.Random;
 
 public class PetStatus {
-	List<String> hungers = Arrays.asList("Dead", "Starving", "Hangry", "Hungry", "Peckish", "Satisified", "Content",
-			"Full", "Stuffed", "Bloated", "Lethargic");
+	List<String> hungers = Arrays.asList("Dead\t", "Starving", "Hangry", "Hungry", "Peckish", "Satisified", "Content",
+			"Full\t", "Stuffed", "Bloated", "Lethargic");
 
 	public String getHungerStatus(int foodLevel) {
 		return hungers.get(foodLevel);
 
 	}
 
-	List<String> entertainments = Arrays.asList("Bored", "Restless", "Happy", "Loved", "Overstimulated");
+	List<String> entertainments = Arrays.asList("Bored\t", "Restless", "Happy\t", "Loved\t", "Overstimulated");
 
 	public String getEntertainmentStatus(int entertained) {
 		return entertainments.get(entertained);
 
 	}
 
-	List<String> rests = Arrays.asList("Delerious", "Exhausted", "Tired", "Rested", "Well Rested");
+	List<String> rests = Arrays.asList("Delerious", "Exhausted", "Tired\t", "Rested\t", "Well Rested");
 
 	public String getRestedStatus(int rested) {
 		return rests.get(rested);
 
 	}
 
-	List<String> personalities = Arrays.asList("Basic", "Curios", "Big Appetited", "High Maintenance", "Lazy",
+	List<String> personalities = Arrays.asList("Basic\t", "Curios\t", "Big Appetited", "High Maintenance", "Lazy\t",
 			"Laid-back");
 
 
