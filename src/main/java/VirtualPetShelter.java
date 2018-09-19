@@ -22,7 +22,7 @@ public class VirtualPetShelter {
 	}
 
 	public void remove(Pet petTag) {
-		pets.remove(petTag.getPetTag());
+		pets.remove(petTag.getPetTag(), petTag);
 
 	}
 

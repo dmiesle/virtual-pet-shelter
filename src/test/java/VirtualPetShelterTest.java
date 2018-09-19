@@ -1,5 +1,4 @@
 import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.nullValue;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
@@ -41,8 +40,8 @@ public class VirtualPetShelterTest {
 	public void removePetFromTheShelter() {
 		underTest.add(pet1);
 		underTest.remove(pet1);
-		String retrievedPet = underTest.findPet(pet1.getPetTag());
-		assertThat(retrievedPet, is(nullValue()));
+		int retrievedPet = underTest.pets.size();
+		assertThat(retrievedPet, is(0));
 	}
 	@Test
 	public void feedAllPetsInTheShelter() {
